@@ -34,6 +34,9 @@ const Index = () => {
                 onLocationSelect={(location) => {
                   console.log('Selected location:', location);
                 }}
+                onDistanceChange={(distance) => {
+                  console.log('Distance range changed to:', distance, 'km');
+                }}
                 className="w-full max-w-lg"
               />
             </div>
