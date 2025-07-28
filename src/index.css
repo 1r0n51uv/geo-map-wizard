@@ -38,6 +38,19 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Location Search Component Colors */
+    --location-primary: 264 83% 57%;
+    --location-primary-glow: 264 83% 67%;
+    --location-secondary: 264 30% 95%;
+    --location-accent: 280 100% 70%;
+    --location-surface: 0 0% 99%;
+    --location-border: 264 20% 88%;
+    --location-shadow: 264 83% 57%;
+
+    /* Gradients */
+    --gradient-location: linear-gradient(135deg, hsl(var(--location-primary)), hsl(var(--location-accent)));
+    --gradient-location-subtle: linear-gradient(180deg, hsl(var(--location-surface)), hsl(var(--location-secondary)));
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
