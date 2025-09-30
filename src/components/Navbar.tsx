@@ -10,7 +10,67 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const yellowThemes = [
+type Theme = {
+  gradient: string;
+  shadow: string;
+  buttonBg: string;
+  textColor: string;
+  hoverTextColor: string;
+};
+
+const themes: Theme[] = [
+  // 🔵 BLUE THEMES
+  {
+    gradient: "linear-gradient(90deg, #89F7FE 0%, #66A6FF 100%)",
+    shadow: "0 4px 20px rgba(102, 166, 255, 0.4)",
+    buttonBg: "bg-blue-100 text-blue-900",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-blue-200",
+  },
+  {
+    gradient: "linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)",
+    shadow: "0 4px 20px rgba(0, 242, 254, 0.4)",
+    buttonBg: "bg-blue-200 text-blue-900",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-blue-100",
+  },
+  {
+    gradient: "linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%)",
+    shadow: "0 4px 20px rgba(0, 210, 255, 0.4)",
+    buttonBg: "bg-white text-blue-800",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-blue-300",
+  },
+  {
+    gradient: "linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)",
+    shadow: "0 4px 20px rgba(0, 201, 255, 0.4)",
+    buttonBg: "bg-white text-blue-700",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-blue-200",
+  },
+  {
+    gradient: "linear-gradient(90deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%)",
+    shadow: "0 4px 20px rgba(79, 142, 255, 0.5)",
+    buttonBg: "bg-blue-300 text-blue-900",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-blue-200",
+  },
+  {
+    gradient: "linear-gradient(90deg, #1E3C72 0%, #2A5298 100%)",
+    shadow: "0 4px 20px rgba(30, 60, 114, 0.4)",
+    buttonBg: "bg-blue-600 text-white",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-blue-100",
+  },
+  {
+    gradient: "linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%)",
+    shadow: "0 4px 20px rgba(109, 213, 237, 0.4)",
+    buttonBg: "bg-blue-100 text-blue-900",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-blue-200",
+  },
+
+  // 🟡 YELLOW THEMES
   {
     gradient: "linear-gradient(90deg, #FFE259 0%, #FFA751 100%)",
     shadow: "0 4px 20px rgba(255, 186, 0, 0.4)",
@@ -46,43 +106,63 @@ const yellowThemes = [
     textColor: "text-yellow-500",
     hoverTextColor: "hover:text-yellow-300",
   },
-];
+  {
+    gradient: "linear-gradient(90deg, #FDEB71 0%, #F8D800 100%)",
+    shadow: "0 4px 20px rgba(248, 216, 0, 0.4)",
+    buttonBg: "bg-yellow-100 text-yellow-900",
+    textColor: "text-yellow-700",
+    hoverTextColor: "hover:text-yellow-500",
+  },
+  {
+    gradient: "linear-gradient(90deg, #F6E27A 0%, #FFCC70 100%)",
+    shadow: "0 4px 20px rgba(255, 204, 112, 0.4)",
+    buttonBg: "bg-yellow-200 text-yellow-900",
+    textColor: "text-yellow-800",
+    hoverTextColor: "hover:text-yellow-600",
+  },
 
-const blueThemes = [
+  // ⚫ BLACK THEMES
   {
-    gradient: "linear-gradient(90deg, #89F7FE 0%, #66A6FF 100%)",
-    shadow: "0 4px 20px rgba(102, 166, 255, 0.4)",
-    buttonBg: "bg-blue-100 text-blue-900",
+    gradient: "linear-gradient(90deg, #232526 0%, #414345 100%)",
+    shadow: "0 4px 20px rgba(0, 0, 0, 0.6)",
+    buttonBg: "bg-white text-black",
     textColor: "text-white",
-    hoverTextColor: "hover:text-blue-200",
+    hoverTextColor: "hover:text-gray-400",
   },
   {
-    gradient: "linear-gradient(90deg, #43C6AC 0%, #191654 100%)",
-    shadow: "0 4px 20px rgba(67, 198, 172, 0.4)",
-    buttonBg: "bg-blue-200 text-blue-900",
+    gradient: "linear-gradient(90deg, #000000 0%, #434343 100%)",
+    shadow: "0 4px 20px rgba(0, 0, 0, 0.6)",
+    buttonBg: "bg-white text-black",
     textColor: "text-white",
-    hoverTextColor: "hover:text-blue-300",
+    hoverTextColor: "hover:text-gray-300",
   },
   {
-    gradient: "linear-gradient(90deg, #4facfe 0%, #00f2fe 100%)",
-    shadow: "0 4px 20px rgba(0, 242, 254, 0.4)",
-    buttonBg: "bg-blue-300 text-blue-900",
+    gradient: "linear-gradient(90deg, #141E30 0%, #243B55 100%)",
+    shadow: "0 4px 20px rgba(36, 59, 85, 0.4)",
+    buttonBg: "bg-gray-900 text-white",
     textColor: "text-white",
-    hoverTextColor: "hover:text-blue-100",
+    hoverTextColor: "hover:text-gray-300",
   },
   {
-    gradient: "linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)",
-    shadow: "0 4px 20px rgba(0, 201, 255, 0.4)",
-    buttonBg: "bg-white text-blue-800",
+    gradient: "linear-gradient(90deg, #1F1C2C 0%, #928DAB 100%)",
+    shadow: "0 4px 20px rgba(146, 141, 171, 0.4)",
+    buttonBg: "bg-gray-800 text-white",
     textColor: "text-white",
-    hoverTextColor: "hover:text-blue-200",
+    hoverTextColor: "hover:text-gray-200",
   },
   {
-    gradient: "linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%)",
-    shadow: "0 4px 20px rgba(0, 210, 255, 0.4)",
-    buttonBg: "bg-white text-blue-700",
+    gradient: "linear-gradient(90deg, #434343 0%, #000000 100%)",
+    shadow: "0 4px 20px rgba(0, 0, 0, 0.5)",
+    buttonBg: "bg-white text-black",
     textColor: "text-white",
-    hoverTextColor: "hover:text-blue-300",
+    hoverTextColor: "hover:text-gray-500",
+  },
+  {
+    gradient: "linear-gradient(90deg, #0f0c29 0%, #302b63 50%, #24243e 100%)",
+    shadow: "0 4px 20px rgba(36, 36, 62, 0.5)",
+    buttonBg: "bg-gray-900 text-white",
+    textColor: "text-white",
+    hoverTextColor: "hover:text-gray-400",
   },
 ];
 
@@ -98,38 +178,21 @@ export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [themeType, setThemeType] = useState<"yellow" | "blue">("yellow");
   const [themeIndex, setThemeIndex] = useState(0);
+const currentTheme = themes[themeIndex];
+
 
   const toggleTheme = () => {
-    if (themeType === "yellow") {
-      if (themeIndex < yellowThemes.length - 1) {
-        setThemeIndex(themeIndex + 1);
-      } else {
-        setThemeType("blue");
-        setThemeIndex(0);
-      }
-    } else {
-      if (themeIndex < blueThemes.length - 1) {
-        setThemeIndex(themeIndex + 1);
-      } else {
-        setThemeType("yellow");
-        setThemeIndex(0);
-      }
-    }
-  };
-
-  const currentTheme =
-    themeType === "yellow"
-      ? yellowThemes[themeIndex]
-      : blueThemes[themeIndex];
+  setThemeIndex((prev) => (prev + 1) % themes.length);
+};
 
   const {
-    gradient,
-    shadow,
-    textColor,
-    hoverTextColor,
-    buttonBg,
-  } = currentTheme;
-
+  gradient,
+  shadow,
+  textColor,
+  hoverTextColor,
+  buttonBg,
+} = currentTheme;
+  
   return (
     <nav
       className="sticky top-0 z-50 w-full border-b border-white/20"
