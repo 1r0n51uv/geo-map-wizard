@@ -75,8 +75,11 @@ export default {
 					yellow: 'hsl(var(--navbar-yellow))',
 					'yellow-hover': 'hsl(var(--navbar-yellow-hover))',
 					'yellow-light': 'hsl(var(--navbar-yellow-light))',
+					'yellow-dark': 'hsl(var(--navbar-yellow-dark))',
 					blue: 'hsl(var(--navbar-blue))',
+					'blue-light': 'hsl(var(--navbar-blue-light))',
 					'blue-dark': 'hsl(var(--navbar-blue-dark))',
+					'blue-darker': 'hsl(var(--navbar-blue-darker))',
 					bg: 'hsl(var(--navbar-bg))',
 					text: 'hsl(var(--navbar-text))'
 				}
