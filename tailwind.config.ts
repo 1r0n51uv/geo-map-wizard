@@ -74,6 +74,7 @@ export default {
 				navbar: {
 					yellow: 'hsl(var(--navbar-yellow))',
 					'yellow-hover': 'hsl(var(--navbar-yellow-hover))',
+					'yellow-light': 'hsl(var(--navbar-yellow-light))',
 					blue: 'hsl(var(--navbar-blue))',
 					'blue-dark': 'hsl(var(--navbar-blue-dark))',
 					bg: 'hsl(var(--navbar-bg))',

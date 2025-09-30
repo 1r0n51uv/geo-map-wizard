@@ -22,7 +22,10 @@ export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-navbar-bg/95 backdrop-blur-sm border-b border-border/40 shadow-sm">
+    <nav className="sticky top-0 z-50 w-full border-b border-navbar-yellow/20" style={{ 
+      background: 'var(--gradient-navbar)',
+      boxShadow: 'var(--navbar-shadow)'
+    }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -44,7 +47,7 @@ export const Navbar = () => {
                       href={item.href}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "text-navbar-text hover:text-navbar-blue font-medium transition-colors"
+                        "text-navbar-blue-dark hover:text-navbar-blue font-medium transition-all duration-300 hover:scale-105 hover:drop-shadow-lg"
                       )}
                     >
                       {item.title}
@@ -59,11 +62,11 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center space-x-3">
             <Button
               variant="ghost"
-              className="text-navbar-text hover:text-navbar-blue hover:bg-navbar-blue/10"
+              className="text-navbar-blue-dark hover:text-navbar-blue hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Sign In
             </Button>
-            <Button className="bg-navbar-yellow hover:bg-navbar-yellow-hover text-navbar-blue-dark font-semibold shadow-md hover:shadow-lg transition-all">
+            <Button className="bg-white text-navbar-blue-dark font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
               Get Started
             </Button>
           </div>
@@ -74,7 +77,7 @@ export const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-navbar-text"
+              className="text-navbar-blue-dark hover:bg-white/20 transition-all duration-300"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -87,25 +90,25 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t border-border/40">
+          <div className="md:hidden py-4 space-y-2 border-t border-white/20">
             {navItems.map((item) => (
               <a
                 key={item.title}
                 href={item.href}
-                className="block px-4 py-2 text-navbar-text hover:text-navbar-blue hover:bg-navbar-blue/5 rounded-md transition-colors"
+                className="block px-4 py-2 text-navbar-blue-dark hover:text-navbar-blue hover:bg-white/20 rounded-md transition-all duration-300 hover:translate-x-1"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.title}
               </a>
             ))}
-            <div className="px-4 pt-4 space-y-2 border-t border-border/40">
+            <div className="px-4 pt-4 space-y-2 border-t border-white/20">
               <Button
                 variant="outline"
-                className="w-full text-navbar-text hover:text-navbar-blue border-navbar-blue/30"
+                className="w-full text-navbar-blue-dark hover:text-navbar-blue border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Sign In
               </Button>
-              <Button className="w-full bg-navbar-yellow hover:bg-navbar-yellow-hover text-navbar-blue-dark font-semibold">
+              <Button className="w-full bg-white text-navbar-blue-dark font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105">
                 Get Started
               </Button>
             </div>
