@@ -70,6 +70,14 @@ export default {
 					surface: 'hsl(var(--location-surface))',
 					border: 'hsl(var(--location-border))',
 					shadow: 'hsl(var(--location-shadow))'
+				},
+				navbar: {
+					yellow: 'hsl(var(--navbar-yellow))',
+					'yellow-hover': 'hsl(var(--navbar-yellow-hover))',
+					blue: 'hsl(var(--navbar-blue))',
+					'blue-dark': 'hsl(var(--navbar-blue-dark))',
+					bg: 'hsl(var(--navbar-bg))',
+					text: 'hsl(var(--navbar-text))'
 				}
 			},
 			borderRadius: {

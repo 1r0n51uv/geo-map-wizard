@@ -51,6 +51,14 @@ All colors MUST be HSL.
     --gradient-location: linear-gradient(135deg, hsl(var(--location-primary)), hsl(var(--location-accent)));
     --gradient-location-subtle: linear-gradient(180deg, hsl(var(--location-surface)), hsl(var(--location-secondary)));
 
+    /* Navbar colors - Blue and Yellow theme */
+    --navbar-yellow: 45 100% 55%;
+    --navbar-yellow-hover: 45 100% 50%;
+    --navbar-blue: 210 100% 60%;
+    --navbar-blue-dark: 220 80% 30%;
+    --navbar-bg: 0 0% 100%;
+    --navbar-text: 220 20% 20%;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
