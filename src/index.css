@@ -52,16 +52,17 @@ All colors MUST be HSL.
     --gradient-location-subtle: linear-gradient(180deg, hsl(var(--location-surface)), hsl(var(--location-secondary)));
 
     /* Navbar colors - Blue and Yellow theme */
-    --navbar-yellow: 45 100% 55%;
-    --navbar-yellow-hover: 45 100% 50%;
-    --navbar-yellow-light: 48 100% 70%;
+    --navbar-yellow: 45 85% 65%;
+    --navbar-yellow-hover: 45 85% 60%;
+    --navbar-yellow-light: 48 90% 75%;
+    --navbar-yellow-dark: 42 80% 50%;
     --navbar-blue: 210 100% 60%;
     --navbar-blue-dark: 220 80% 30%;
     --navbar-bg: 0 0% 100%;
     --navbar-text: 220 20% 20%;
     
     /* Navbar gradients */
-    --gradient-navbar: linear-gradient(135deg, hsl(var(--navbar-yellow)) 0%, hsl(var(--navbar-yellow-light)) 50%, hsl(var(--navbar-yellow)) 100%);
+    --gradient-navbar: linear-gradient(135deg, hsl(var(--navbar-yellow-dark)) 0%, hsl(var(--navbar-yellow)) 30%, hsl(var(--navbar-yellow-light)) 60%, hsl(var(--navbar-yellow)) 100%);
     --navbar-shadow: 0 4px 20px -2px hsl(var(--navbar-yellow) / 0.3);
     --navbar-shadow-hover: 0 6px 30px -2px hsl(var(--navbar-yellow) / 0.5);
 
